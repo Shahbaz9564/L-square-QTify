@@ -1,0 +1,23 @@
+.button {
+  height: 47px;
+  width: 170px;
+  background-color: /*var(--color-black)*/
+  #121212;
+  color: /*var(--color-primary)*/ #34c94b;
+  border-radius: 12px;
+  border: 1px solid var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; 
+  padding: 10px 16px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
