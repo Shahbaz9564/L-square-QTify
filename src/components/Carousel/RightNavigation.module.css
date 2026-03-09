@@ -1,0 +1,8 @@
+.rightNavigation {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    z-index: 10;
+    
+   
+}

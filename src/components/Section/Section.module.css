@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.header {
+ display: flex;
+ justify-content: space-between;   
+ cursor: pointer;
+}
+.text {
+    color: #FFFFFF;
+}
+.toggle {
+    color: #34c94b;
+}

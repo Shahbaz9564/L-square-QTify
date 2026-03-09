@@ -1,0 +1,37 @@
+.wrapper {
+    width: 159px;
+    height: 232px;
+    gap: 6px;
+        background-color: #121212;
+    
+}
+
+.banner {
+    height: 170px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.chipParent {
+height: 35px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+background-color:#FFFFFF;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+
+}
+
+.name {
+    height: 27px;
+    background-color: #121212;
+    color: #FFFFFF;
+}
