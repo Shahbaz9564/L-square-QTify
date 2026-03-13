@@ -1,20 +1,33 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSwiper } from "swiper/react";
-import {ReactComponent as LeftArrow} from "../../assets/LeftArrow.svg"
-import styles from "./LeftNavigation.module.css"
-export default function LeftNavigation (){
-const swiper= useSwiper();
-const [isBegining, setisBegining]=useState(swiper.isBeginning);
+import { ReactComponent as LeftArrow } from "../../assets/LeftArrow.svg";
+import styles from "./LeftNavigation.module.css";
 
-swiper.on("slideChange", function (){
-    setisBegining(swiper.isBeginning);
-});
+export default function LeftNavigation() {
+  const swiper = useSwiper();
+  const [isBeginning, setIsBeginning] = useState(swiper.isBeginning);
 
-return (
-<div className={styles.leftNavigation}  >
-    {!isBegining && <LeftArrow width={50} height={"auto"} onClick={()=> swiper.slidePrev()}  /> }
-</div>
-)
+  useEffect(() => {
+    const handleSlideChange = () => {
+      setIsBeginning(swiper.isBeginning);
+    };
 
+    swiper.on("slideChange", handleSlideChange);
+
+    return () => {
+      swiper.off("slideChange", handleSlideChange);
+    };
+  }, [swiper]);
+
+  return (
+    <div className={styles.leftNavigation}>
+      {!isBeginning && (
+        <LeftArrow
+          width={40}
+          height={"auto"}
+          onClick={() => swiper.slidePrev()}
+        />
+      )}
+    </div>
+  );
 }

@@ -1,0 +1,13 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.swiper {
+  padding: 20px 40px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
